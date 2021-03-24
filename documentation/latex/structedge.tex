@@ -1,0 +1,80 @@
+\hypertarget{structedge}{}\doxysection{edge Struct Reference}
+\label{structedge}\index{edge@{edge}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{structedge_afbea9319f7c7d0ddad8548e0f659d312}{operator$<$}} (const \mbox{\hyperlink{structedge}{edge}} \&e) const
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+string \mbox{\hyperlink{structedge_a1d0246f9985baf7be4b9199f5f672ae5}{edgetype}}
+\begin{DoxyCompactList}\small\item\em The type of the edge -\/ either TOP, BOTTOM, LEFT or RIGHT. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structinterval}{interval}} \mbox{\hyperlink{structedge_a7b3aa7cba0da9ae53a4f9369eb61584a}{i}}
+\begin{DoxyCompactList}\small\item\em The interval defines the length of the edge, and the minimum and maximum values that the variable coordinate can take. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{_contours_8cc_a1ae942ac54ad537f51a8f7d3723f61d7}{ll}} \mbox{\hyperlink{structedge_a7fbc3002bcda9f589b105781b631acde}{x}}
+\begin{DoxyCompactList}\small\item\em The fixed coordinate of the edge. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{_contours_8cc_a1ae942ac54ad537f51a8f7d3723f61d7}{ll}} \mbox{\hyperlink{structedge_adadae42f979f6fc16d7eac5b763b4675}{rect\+\_\+id}}
+\begin{DoxyCompactList}\small\item\em Unique ID that was given to the rectangle containing this edge. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Brief description of edge structure
+
+This structure contains an integer that defines a fixed point, an interval between which it spans, an edge type, and the unique ID representing the rectangle to which it belongs 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{structedge_afbea9319f7c7d0ddad8548e0f659d312}\label{structedge_afbea9319f7c7d0ddad8548e0f659d312}} 
+\index{edge@{edge}!operator$<$@{operator$<$}}
+\index{operator$<$@{operator$<$}!edge@{edge}}
+\doxysubsubsection{\texorpdfstring{operator$<$()}{operator<()}}
+{\footnotesize\ttfamily bool edge\+::operator$<$ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structedge}{edge}} \&}]{e }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Definition of comparator to facilitate set insertions in a sorted order 
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{structedge_a1d0246f9985baf7be4b9199f5f672ae5}\label{structedge_a1d0246f9985baf7be4b9199f5f672ae5}} 
+\index{edge@{edge}!edgetype@{edgetype}}
+\index{edgetype@{edgetype}!edge@{edge}}
+\doxysubsubsection{\texorpdfstring{edgetype}{edgetype}}
+{\footnotesize\ttfamily string edge\+::edgetype}
+
+
+
+The type of the edge -\/ either TOP, BOTTOM, LEFT or RIGHT. 
+
+\mbox{\Hypertarget{structedge_a7b3aa7cba0da9ae53a4f9369eb61584a}\label{structedge_a7b3aa7cba0da9ae53a4f9369eb61584a}} 
+\index{edge@{edge}!i@{i}}
+\index{i@{i}!edge@{edge}}
+\doxysubsubsection{\texorpdfstring{i}{i}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structinterval}{interval}} edge\+::i}
+
+
+
+The interval defines the length of the edge, and the minimum and maximum values that the variable coordinate can take. 
+
+\mbox{\Hypertarget{structedge_adadae42f979f6fc16d7eac5b763b4675}\label{structedge_adadae42f979f6fc16d7eac5b763b4675}} 
+\index{edge@{edge}!rect\_id@{rect\_id}}
+\index{rect\_id@{rect\_id}!edge@{edge}}
+\doxysubsubsection{\texorpdfstring{rect\_id}{rect\_id}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_contours_8cc_a1ae942ac54ad537f51a8f7d3723f61d7}{ll}} edge\+::rect\+\_\+id}
+
+
+
+Unique ID that was given to the rectangle containing this edge. 
+
+\mbox{\Hypertarget{structedge_a7fbc3002bcda9f589b105781b631acde}\label{structedge_a7fbc3002bcda9f589b105781b631acde}} 
+\index{edge@{edge}!x@{x}}
+\index{x@{x}!edge@{edge}}
+\doxysubsubsection{\texorpdfstring{x}{x}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_contours_8cc_a1ae942ac54ad537f51a8f7d3723f61d7}{ll}} edge\+::x}
+
+
+
+The fixed coordinate of the edge. 
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_contours_8cc}{Contours.\+cc}}\end{DoxyCompactItemize}

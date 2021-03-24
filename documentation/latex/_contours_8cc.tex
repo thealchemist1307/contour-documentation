@@ -1,0 +1,473 @@
+\hypertarget{_contours_8cc}{}\doxysection{Contours.\+cc File Reference}
+\label{_contours_8cc}\index{Contours.cc@{Contours.cc}}
+
+
+This file contains a complete working implementation of R.\+H Guting\textquotesingle{}s divide and conquer algorithm that helps solve the contour problem.  
+
+
+{\ttfamily \#include $<$bits/stdc++.\+h$>$}\newline
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structpoint}{point}}
+\item 
+struct \mbox{\hyperlink{structinterval}{interval}}
+\item 
+struct \mbox{\hyperlink{structline__segment}{line\+\_\+segment}}
+\item 
+struct \mbox{\hyperlink{structrectangle}{rectangle}}
+\item 
+struct \mbox{\hyperlink{structedge}{edge}}
+\item 
+struct \mbox{\hyperlink{structctree}{ctree}}
+\item 
+struct \mbox{\hyperlink{structstripe}{stripe}}
+\item 
+struct \mbox{\hyperlink{struct_stripe_return_type}{Stripe\+Return\+Type}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef long long int \mbox{\hyperlink{_contours_8cc_a1ae942ac54ad537f51a8f7d3723f61d7}{ll}}
+\item 
+typedef struct \mbox{\hyperlink{structpoint}{point}} \mbox{\hyperlink{_contours_8cc_af3db11a2d803c7937bdb0952d6d6a66d}{point}}
+\item 
+typedef struct \mbox{\hyperlink{structinterval}{interval}} \mbox{\hyperlink{_contours_8cc_a1962d3618053240ee34ad8e3e3c26fd8}{interval}}
+\item 
+typedef struct \mbox{\hyperlink{structline__segment}{line\+\_\+segment}} \mbox{\hyperlink{_contours_8cc_a9a0ffb0ace2c30ecc0a91ba4430bb412}{line\+\_\+segment}}
+\item 
+typedef struct \mbox{\hyperlink{structrectangle}{rectangle}} \mbox{\hyperlink{_contours_8cc_ac05b76cb45185785dc024912b32b7b05}{rectangle}}
+\item 
+typedef struct \mbox{\hyperlink{structedge}{edge}} \mbox{\hyperlink{_contours_8cc_a62e8ac20ad6459019691857781e5a4da}{edge}}
+\item 
+typedef struct \mbox{\hyperlink{structctree}{ctree}} \mbox{\hyperlink{_contours_8cc_a0c796404aced5ab4a7479edfbc2cc847}{ctree}}
+\item 
+typedef struct \mbox{\hyperlink{structstripe}{stripe}} \mbox{\hyperlink{_contours_8cc_acbd8d8fff32460226a38ea706e5eaefb}{stripe}}
+\item 
+typedef struct \mbox{\hyperlink{struct_stripe_return_type}{Stripe\+Return\+Type}} \mbox{\hyperlink{_contours_8cc_a8d71b8f9c7f1086aa73fd4555ad1ed23}{SRT}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structrectangle}{rectangle}} \mbox{\hyperlink{_contours_8cc_a6325f8bb04a986ea1f3ec6ad84d8924a}{find\+Frame}} ()
+\begin{DoxyCompactList}\small\item\em Finds bounding frame around set of rectangles. \end{DoxyCompactList}\item 
+set$<$ \mbox{\hyperlink{structinterval}{interval}} $>$ \mbox{\hyperlink{_contours_8cc_ad82be9744095ea0c86ce6343fabe58ba}{y\+\_\+partition}} (set$<$ \mbox{\hyperlink{_contours_8cc_a1ae942ac54ad537f51a8f7d3723f61d7}{ll}} $>$ y\+\_\+coordinates)
+\item 
+set$<$ \mbox{\hyperlink{_contours_8cc_a1ae942ac54ad537f51a8f7d3723f61d7}{ll}} $>$ \mbox{\hyperlink{_contours_8cc_aabaf5122088253371d694859b9becff0}{y\+\_\+set}} ()
+\item 
+void \mbox{\hyperlink{_contours_8cc_ae1c745ec01e98048dce69de6de505709}{inorder}} (\mbox{\hyperlink{structctree}{ctree}} $\ast$node)
+\item 
+void \mbox{\hyperlink{_contours_8cc_a7717fcc79634c44cb875795fdcdf04af}{inorder\+\_\+find}} (\mbox{\hyperlink{structctree}{ctree}} $\ast$node, \mbox{\hyperlink{_contours_8cc_a1ae942ac54ad537f51a8f7d3723f61d7}{ll}} low\+\_\+x, \mbox{\hyperlink{_contours_8cc_a1ae942ac54ad537f51a8f7d3723f61d7}{ll}} high\+\_\+x, vector$<$ \mbox{\hyperlink{structctree}{ctree}} $\ast$ $>$ \&res)
+\item 
+set$<$ pair$<$ \mbox{\hyperlink{structinterval}{interval}}, \mbox{\hyperlink{_contours_8cc_a1ae942ac54ad537f51a8f7d3723f61d7}{ll}} $>$ $>$ \mbox{\hyperlink{_contours_8cc_a977cc2d2113ea6d7b5a22e5c5c8d8706}{set\+\_\+intersection}} (set$<$ pair$<$ \mbox{\hyperlink{structinterval}{interval}}, \mbox{\hyperlink{_contours_8cc_a1ae942ac54ad537f51a8f7d3723f61d7}{ll}} $>$$>$ i1, set$<$ pair$<$ \mbox{\hyperlink{structinterval}{interval}}, \mbox{\hyperlink{_contours_8cc_a1ae942ac54ad537f51a8f7d3723f61d7}{ll}} $>$$>$ i2)
+\item 
+set$<$ pair$<$ \mbox{\hyperlink{structinterval}{interval}}, \mbox{\hyperlink{_contours_8cc_a1ae942ac54ad537f51a8f7d3723f61d7}{ll}} $>$ $>$ \mbox{\hyperlink{_contours_8cc_a18c55dc1c0456a97bfab6ca5f57ed473}{set\+\_\+difference}} (set$<$ pair$<$ \mbox{\hyperlink{structinterval}{interval}}, \mbox{\hyperlink{_contours_8cc_a1ae942ac54ad537f51a8f7d3723f61d7}{ll}} $>$$>$ i1, set$<$ pair$<$ \mbox{\hyperlink{structinterval}{interval}}, \mbox{\hyperlink{_contours_8cc_a1ae942ac54ad537f51a8f7d3723f61d7}{ll}} $>$$>$ i2)
+\item 
+set$<$ pair$<$ \mbox{\hyperlink{structinterval}{interval}}, \mbox{\hyperlink{_contours_8cc_a1ae942ac54ad537f51a8f7d3723f61d7}{ll}} $>$ $>$ \mbox{\hyperlink{_contours_8cc_a67e41ed85edc94e1a08e1d9ce9d54369}{set\+\_\+union}} (set$<$ pair$<$ \mbox{\hyperlink{structinterval}{interval}}, \mbox{\hyperlink{_contours_8cc_a1ae942ac54ad537f51a8f7d3723f61d7}{ll}} $>$$>$ i1, set$<$ pair$<$ \mbox{\hyperlink{structinterval}{interval}}, \mbox{\hyperlink{_contours_8cc_a1ae942ac54ad537f51a8f7d3723f61d7}{ll}} $>$$>$ i2)
+\item 
+set$<$ \mbox{\hyperlink{structstripe}{stripe}} $>$ \mbox{\hyperlink{_contours_8cc_ae8c0db4edd7be842c28a94fc7e89461c}{copy}} (set$<$ \mbox{\hyperlink{structstripe}{stripe}} $>$ S, set$<$ \mbox{\hyperlink{_contours_8cc_a1ae942ac54ad537f51a8f7d3723f61d7}{ll}} $>$ P, \mbox{\hyperlink{structinterval}{interval}} x\+\_\+ext)
+\item 
+set$<$ \mbox{\hyperlink{structstripe}{stripe}} $>$ \mbox{\hyperlink{_contours_8cc_a3647d3bc2f0e4be917857fb7a3f9b013}{blacken}} (set$<$ \mbox{\hyperlink{structstripe}{stripe}} $>$ S, set$<$ pair$<$ \mbox{\hyperlink{structinterval}{interval}}, \mbox{\hyperlink{_contours_8cc_a1ae942ac54ad537f51a8f7d3723f61d7}{ll}} $>$$>$ J)
+\item 
+set$<$ \mbox{\hyperlink{structstripe}{stripe}} $>$ \mbox{\hyperlink{_contours_8cc_ac27e7535b5f50f93ff557d3bc309e60b}{concat}} (set$<$ \mbox{\hyperlink{structstripe}{stripe}} $>$ s\+\_\+left, set$<$ \mbox{\hyperlink{structstripe}{stripe}} $>$ s\+\_\+right, set$<$ \mbox{\hyperlink{_contours_8cc_a1ae942ac54ad537f51a8f7d3723f61d7}{ll}} $>$ P, \mbox{\hyperlink{structinterval}{interval}} x\+\_\+ext)
+\item 
+\mbox{\hyperlink{_contours_8cc_a8d71b8f9c7f1086aa73fd4555ad1ed23}{SRT}} \mbox{\hyperlink{_contours_8cc_a2b4a618c8325c8d8219c2268f0e2aa01}{stripes}} (set$<$ \mbox{\hyperlink{structedge}{edge}} $>$ VRX, \mbox{\hyperlink{structinterval}{interval}} x\+\_\+ext, \mbox{\hyperlink{structinterval}{interval}} ylimits)
+\item 
+set$<$ \mbox{\hyperlink{structstripe}{stripe}} $>$ \mbox{\hyperlink{_contours_8cc_aafbf93539f3641807f6355c739e1a413}{rectangle\+\_\+\+DAC}} (vector$<$ \mbox{\hyperlink{structrectangle}{rectangle}} $>$ rect)
+\item 
+set$<$ \mbox{\hyperlink{structline__segment}{line\+\_\+segment}} $>$ \mbox{\hyperlink{_contours_8cc_a53808441a4ec974fb288cd778713cac3}{contour\+\_\+pieces}} (\mbox{\hyperlink{structedge}{edge}} h, set$<$ \mbox{\hyperlink{structstripe}{stripe}} $>$ S)
+\item 
+set$<$ \mbox{\hyperlink{structline__segment}{line\+\_\+segment}} $>$ \mbox{\hyperlink{_contours_8cc_a8ca5ab059f35bd4a3315bcf8a0730ae4}{contour}} (set$<$ \mbox{\hyperlink{structedge}{edge}} $>$ H, set$<$ \mbox{\hyperlink{structstripe}{stripe}} $>$ S)
+\item 
+set$<$ \mbox{\hyperlink{structinterval}{interval}} $>$ \mbox{\hyperlink{_contours_8cc_aec32689f99b51b08b68f568a796aaf80}{merge\+\_\+intervals}} (set$<$ \mbox{\hyperlink{structinterval}{interval}} $>$ s)
+\item 
+void \mbox{\hyperlink{_contours_8cc_ae2675e4b72e02da1c72d1230a8883e40}{csv\+\_\+writer}} (set$<$ \mbox{\hyperlink{structline__segment}{line\+\_\+segment}} $>$ hrc, set$<$ \mbox{\hyperlink{structline__segment}{line\+\_\+segment}} $>$ vrc)
+\item 
+int \mbox{\hyperlink{_contours_8cc_ae66f6b31b5ad750f1fe042a706a4e3d4}{main}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+string \mbox{\hyperlink{_contours_8cc_a85a9196a8b551b4b924c4d783ab0eb12}{EDGE\+\_\+\+TYPES}} \mbox{[}4\mbox{]} = \{\char`\"{}TOP\char`\"{},\char`\"{}BOTTOM\char`\"{},\char`\"{}LEFT\char`\"{},\char`\"{}RIGHT\char`\"{}\}
+\begin{DoxyCompactList}\small\item\em Global variable to store the possible values of edge types. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{_contours_8cc_aab342d54ef12b177ffb6ddbba770015e}{LRU\+\_\+\+TYPES}} \mbox{[}3\mbox{]} = \{\char`\"{}LEFT\char`\"{},\char`\"{}RIGHT\char`\"{},\char`\"{}UNDEF\char`\"{}\}
+\begin{DoxyCompactList}\small\item\em Global variable to store the subtree type. \end{DoxyCompactList}\item 
+vector$<$ \mbox{\hyperlink{structrectangle}{rectangle}} $>$ \mbox{\hyperlink{_contours_8cc_ab881fcb2c053cfa393dad1cd6d3a3526}{iso\+\_\+rectangles\+\_\+input}}
+\begin{DoxyCompactList}\small\item\em Global variable to store the rectangles input by the user. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This file contains a complete working implementation of R.\+H Guting\textquotesingle{}s divide and conquer algorithm that helps solve the contour problem. 
+
+
+
+\doxysubsection{Typedef Documentation}
+\mbox{\Hypertarget{_contours_8cc_a0c796404aced5ab4a7479edfbc2cc847}\label{_contours_8cc_a0c796404aced5ab4a7479edfbc2cc847}} 
+\index{Contours.cc@{Contours.cc}!ctree@{ctree}}
+\index{ctree@{ctree}!Contours.cc@{Contours.cc}}
+\doxysubsubsection{\texorpdfstring{ctree}{ctree}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{structctree}{ctree}} \mbox{\hyperlink{structctree}{ctree}}}
+
+Brief description of ctree structure
+
+Used to represent the x union datatype present in stripes data structure. Used to store a range of intervals in the form of a binary search tree \mbox{\Hypertarget{_contours_8cc_a62e8ac20ad6459019691857781e5a4da}\label{_contours_8cc_a62e8ac20ad6459019691857781e5a4da}} 
+\index{Contours.cc@{Contours.cc}!edge@{edge}}
+\index{edge@{edge}!Contours.cc@{Contours.cc}}
+\doxysubsubsection{\texorpdfstring{edge}{edge}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{structedge}{edge}} \mbox{\hyperlink{structedge}{edge}}}
+
+Brief description of edge structure
+
+This structure contains an integer that defines a fixed point, an interval between which it spans, an edge type, and the unique ID representing the rectangle to which it belongs \mbox{\Hypertarget{_contours_8cc_a1962d3618053240ee34ad8e3e3c26fd8}\label{_contours_8cc_a1962d3618053240ee34ad8e3e3c26fd8}} 
+\index{Contours.cc@{Contours.cc}!interval@{interval}}
+\index{interval@{interval}!Contours.cc@{Contours.cc}}
+\doxysubsubsection{\texorpdfstring{interval}{interval}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{structinterval}{interval}} \mbox{\hyperlink{structinterval}{interval}}}
+
+Brief description of interval structure
+
+This structure contains two integers, representing the minimum coordinate and the maximum coordinate that is spanned by the interval. \mbox{\Hypertarget{_contours_8cc_a9a0ffb0ace2c30ecc0a91ba4430bb412}\label{_contours_8cc_a9a0ffb0ace2c30ecc0a91ba4430bb412}} 
+\index{Contours.cc@{Contours.cc}!line\_segment@{line\_segment}}
+\index{line\_segment@{line\_segment}!Contours.cc@{Contours.cc}}
+\doxysubsubsection{\texorpdfstring{line\_segment}{line\_segment}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{structline__segment}{line\+\_\+segment}} \mbox{\hyperlink{structline__segment}{line\+\_\+segment}}}
+
+Brief description of line segment structure
+
+This structure contains a fixed coordinate x and an interval which represents the range of coordinates on the alternate axis from x \mbox{\Hypertarget{_contours_8cc_a1ae942ac54ad537f51a8f7d3723f61d7}\label{_contours_8cc_a1ae942ac54ad537f51a8f7d3723f61d7}} 
+\index{Contours.cc@{Contours.cc}!ll@{ll}}
+\index{ll@{ll}!Contours.cc@{Contours.cc}}
+\doxysubsubsection{\texorpdfstring{ll}{ll}}
+{\footnotesize\ttfamily typedef long long int \mbox{\hyperlink{_contours_8cc_a1ae942ac54ad537f51a8f7d3723f61d7}{ll}}}
+
+\mbox{\Hypertarget{_contours_8cc_af3db11a2d803c7937bdb0952d6d6a66d}\label{_contours_8cc_af3db11a2d803c7937bdb0952d6d6a66d}} 
+\index{Contours.cc@{Contours.cc}!point@{point}}
+\index{point@{point}!Contours.cc@{Contours.cc}}
+\doxysubsubsection{\texorpdfstring{point}{point}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{structpoint}{point}} \mbox{\hyperlink{structpoint}{point}}}
+
+Brief description of points class
+
+The point structure contains two integers, representing the x and y coordinates of the point in 2D space \mbox{\Hypertarget{_contours_8cc_ac05b76cb45185785dc024912b32b7b05}\label{_contours_8cc_ac05b76cb45185785dc024912b32b7b05}} 
+\index{Contours.cc@{Contours.cc}!rectangle@{rectangle}}
+\index{rectangle@{rectangle}!Contours.cc@{Contours.cc}}
+\doxysubsubsection{\texorpdfstring{rectangle}{rectangle}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{structrectangle}{rectangle}} \mbox{\hyperlink{structrectangle}{rectangle}}}
+
+Brief description of rectangle structure
+
+This structure contains two intervals that can define a rectangle along with a unique ID \mbox{\Hypertarget{_contours_8cc_a8d71b8f9c7f1086aa73fd4555ad1ed23}\label{_contours_8cc_a8d71b8f9c7f1086aa73fd4555ad1ed23}} 
+\index{Contours.cc@{Contours.cc}!SRT@{SRT}}
+\index{SRT@{SRT}!Contours.cc@{Contours.cc}}
+\doxysubsubsection{\texorpdfstring{SRT}{SRT}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{struct_stripe_return_type}{Stripe\+Return\+Type}} \mbox{\hyperlink{_contours_8cc_a8d71b8f9c7f1086aa73fd4555ad1ed23}{SRT}}}
+
+Brief description of \mbox{\hyperlink{struct_stripe_return_type}{Stripe\+Return\+Type}}
+
+This structure encompasses all the returned components from the stripes algorithm \mbox{\Hypertarget{_contours_8cc_acbd8d8fff32460226a38ea706e5eaefb}\label{_contours_8cc_acbd8d8fff32460226a38ea706e5eaefb}} 
+\index{Contours.cc@{Contours.cc}!stripe@{stripe}}
+\index{stripe@{stripe}!Contours.cc@{Contours.cc}}
+\doxysubsubsection{\texorpdfstring{stripe}{stripe}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{structstripe}{stripe}} \mbox{\hyperlink{structstripe}{stripe}}}
+
+Brief description of stripe structure
+
+This structure is used to represent all horizontal stripes that the frame is partitioned into. 
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{_contours_8cc_a3647d3bc2f0e4be917857fb7a3f9b013}\label{_contours_8cc_a3647d3bc2f0e4be917857fb7a3f9b013}} 
+\index{Contours.cc@{Contours.cc}!blacken@{blacken}}
+\index{blacken@{blacken}!Contours.cc@{Contours.cc}}
+\doxysubsubsection{\texorpdfstring{blacken()}{blacken()}}
+{\footnotesize\ttfamily set$<$\mbox{\hyperlink{structstripe}{stripe}}$>$ blacken (\begin{DoxyParamCaption}\item[{set$<$ \mbox{\hyperlink{structstripe}{stripe}} $>$}]{S,  }\item[{set$<$ pair$<$ \mbox{\hyperlink{structinterval}{interval}}, \mbox{\hyperlink{_contours_8cc_a1ae942ac54ad537f51a8f7d3723f61d7}{ll}} $>$$>$}]{J }\end{DoxyParamCaption})}
+
+Updates the x\+\_\+union values for the stripes that have not found a partner edge in S 
+\begin{DoxyParams}{Parameters}
+{\em S} & defines a set of existing stripes \\
+\hline
+{\em J} & defines the set of intervals which do not have a matching edge in S \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Modified set of stripes with updated x\+\_\+union values 
+\end{DoxyReturn}
+\mbox{\Hypertarget{_contours_8cc_ac27e7535b5f50f93ff557d3bc309e60b}\label{_contours_8cc_ac27e7535b5f50f93ff557d3bc309e60b}} 
+\index{Contours.cc@{Contours.cc}!concat@{concat}}
+\index{concat@{concat}!Contours.cc@{Contours.cc}}
+\doxysubsubsection{\texorpdfstring{concat()}{concat()}}
+{\footnotesize\ttfamily set$<$\mbox{\hyperlink{structstripe}{stripe}}$>$ concat (\begin{DoxyParamCaption}\item[{set$<$ \mbox{\hyperlink{structstripe}{stripe}} $>$}]{s\+\_\+left,  }\item[{set$<$ \mbox{\hyperlink{structstripe}{stripe}} $>$}]{s\+\_\+right,  }\item[{set$<$ \mbox{\hyperlink{_contours_8cc_a1ae942ac54ad537f51a8f7d3723f61d7}{ll}} $>$}]{P,  }\item[{\mbox{\hyperlink{structinterval}{interval}}}]{x\+\_\+ext }\end{DoxyParamCaption})}
+
+Combines stripes located across the median line 
+\begin{DoxyParams}{Parameters}
+{\em s\+\_\+left} & defines a set of stripes on the left side of the median line \\
+\hline
+{\em s\+\_\+right} & defines a set of stripes on the right side of the median line \\
+\hline
+{\em P} & defines a set of partition points \\
+\hline
+{\em x\+\_\+ext} & depicts the width of the stripe \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Updated set of stripes formed using s\+\_\+left and s\+\_\+right after dissolving the median line 
+\end{DoxyReturn}
+\mbox{\Hypertarget{_contours_8cc_a8ca5ab059f35bd4a3315bcf8a0730ae4}\label{_contours_8cc_a8ca5ab059f35bd4a3315bcf8a0730ae4}} 
+\index{Contours.cc@{Contours.cc}!contour@{contour}}
+\index{contour@{contour}!Contours.cc@{Contours.cc}}
+\doxysubsubsection{\texorpdfstring{contour()}{contour()}}
+{\footnotesize\ttfamily set$<$\mbox{\hyperlink{structline__segment}{line\+\_\+segment}}$>$ contour (\begin{DoxyParamCaption}\item[{set$<$ \mbox{\hyperlink{structedge}{edge}} $>$}]{H,  }\item[{set$<$ \mbox{\hyperlink{structstripe}{stripe}} $>$}]{S }\end{DoxyParamCaption})}
+
+Function that computes all the horizontal contours generated using the horizontal edges from the input rectangles and the set of stripes 
+\begin{DoxyParams}{Parameters}
+{\em H} & Set of horizontal edges formed by the input rectangles \\
+\hline
+{\em S} & defines the set of stripes that the frame is partitioned into \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Set of line segments representing the horizontal contours for the union of input rectangles 
+\end{DoxyReturn}
+\mbox{\Hypertarget{_contours_8cc_a53808441a4ec974fb288cd778713cac3}\label{_contours_8cc_a53808441a4ec974fb288cd778713cac3}} 
+\index{Contours.cc@{Contours.cc}!contour\_pieces@{contour\_pieces}}
+\index{contour\_pieces@{contour\_pieces}!Contours.cc@{Contours.cc}}
+\doxysubsubsection{\texorpdfstring{contour\_pieces()}{contour\_pieces()}}
+{\footnotesize\ttfamily set$<$\mbox{\hyperlink{structline__segment}{line\+\_\+segment}}$>$ contour\+\_\+pieces (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structedge}{edge}}}]{h,  }\item[{set$<$ \mbox{\hyperlink{structstripe}{stripe}} $>$}]{S }\end{DoxyParamCaption})}
+
+Fumction to compute the horizontal contours associated with the given edge and the set of stripes 
+\begin{DoxyParams}{Parameters}
+{\em h} & Horizontal edge which is part of an input rectangle \\
+\hline
+{\em S} & defines the set of stripes that the frame is partitioned into \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Set of line segments representing the horizontal contours associated with the current edge 
+\end{DoxyReturn}
+\mbox{\Hypertarget{_contours_8cc_ae8c0db4edd7be842c28a94fc7e89461c}\label{_contours_8cc_ae8c0db4edd7be842c28a94fc7e89461c}} 
+\index{Contours.cc@{Contours.cc}!copy@{copy}}
+\index{copy@{copy}!Contours.cc@{Contours.cc}}
+\doxysubsubsection{\texorpdfstring{copy()}{copy()}}
+{\footnotesize\ttfamily set$<$\mbox{\hyperlink{structstripe}{stripe}}$>$ copy (\begin{DoxyParamCaption}\item[{set$<$ \mbox{\hyperlink{structstripe}{stripe}} $>$}]{S,  }\item[{set$<$ \mbox{\hyperlink{_contours_8cc_a1ae942ac54ad537f51a8f7d3723f61d7}{ll}} $>$}]{P,  }\item[{\mbox{\hyperlink{structinterval}{interval}}}]{x\+\_\+ext }\end{DoxyParamCaption})}
+
+Adds additional stripes to the existing set of stripes S based on the intervals induced by partition of P 
+\begin{DoxyParams}{Parameters}
+{\em S} & defines a set of existing stripes \\
+\hline
+{\em P} & defines a set of partition points \\
+\hline
+{\em x\+\_\+ext} & depicts the width of the stripe \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Updated set of stripes containing the additional stripes induced by partition of P 
+\end{DoxyReturn}
+\mbox{\Hypertarget{_contours_8cc_ae2675e4b72e02da1c72d1230a8883e40}\label{_contours_8cc_ae2675e4b72e02da1c72d1230a8883e40}} 
+\index{Contours.cc@{Contours.cc}!csv\_writer@{csv\_writer}}
+\index{csv\_writer@{csv\_writer}!Contours.cc@{Contours.cc}}
+\doxysubsubsection{\texorpdfstring{csv\_writer()}{csv\_writer()}}
+{\footnotesize\ttfamily void csv\+\_\+writer (\begin{DoxyParamCaption}\item[{set$<$ \mbox{\hyperlink{structline__segment}{line\+\_\+segment}} $>$}]{hrc,  }\item[{set$<$ \mbox{\hyperlink{structline__segment}{line\+\_\+segment}} $>$}]{vrc }\end{DoxyParamCaption})}
+
+Function that writes the coordinates of the line segments that form the horizontal and vertical contours, along with the input rectangles into separate files for later use in visualization 
+\begin{DoxyParams}{Parameters}
+{\em hrc} & Set of horizontal line segments that form the horizontal contours \\
+\hline
+{\em vrc} & Set of vertical line segments that form the vertical contours \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{_contours_8cc_a6325f8bb04a986ea1f3ec6ad84d8924a}\label{_contours_8cc_a6325f8bb04a986ea1f3ec6ad84d8924a}} 
+\index{Contours.cc@{Contours.cc}!findFrame@{findFrame}}
+\index{findFrame@{findFrame}!Contours.cc@{Contours.cc}}
+\doxysubsubsection{\texorpdfstring{findFrame()}{findFrame()}}
+{\footnotesize\ttfamily find\+Frame (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Finds bounding frame around set of rectangles. 
+
+Function that helps find the bounding frame around a set of iso-\/rectangles \begin{DoxyReturn}{Returns}
+returns a rectangle structure containing information about the boundaries of the frame 
+\end{DoxyReturn}
+\mbox{\Hypertarget{_contours_8cc_ae1c745ec01e98048dce69de6de505709}\label{_contours_8cc_ae1c745ec01e98048dce69de6de505709}} 
+\index{Contours.cc@{Contours.cc}!inorder@{inorder}}
+\index{inorder@{inorder}!Contours.cc@{Contours.cc}}
+\doxysubsubsection{\texorpdfstring{inorder()}{inorder()}}
+{\footnotesize\ttfamily void inorder (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structctree}{ctree}} $\ast$}]{node }\end{DoxyParamCaption})}
+
+Prints the inorder traversal of a binary search tree whose root is passed as the parameter 
+\begin{DoxyParams}{Parameters}
+{\em node} & The root node of the tree of type ctree \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{_contours_8cc_a7717fcc79634c44cb875795fdcdf04af}\label{_contours_8cc_a7717fcc79634c44cb875795fdcdf04af}} 
+\index{Contours.cc@{Contours.cc}!inorder\_find@{inorder\_find}}
+\index{inorder\_find@{inorder\_find}!Contours.cc@{Contours.cc}}
+\doxysubsubsection{\texorpdfstring{inorder\_find()}{inorder\_find()}}
+{\footnotesize\ttfamily void inorder\+\_\+find (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structctree}{ctree}} $\ast$}]{node,  }\item[{\mbox{\hyperlink{_contours_8cc_a1ae942ac54ad537f51a8f7d3723f61d7}{ll}}}]{low\+\_\+x,  }\item[{\mbox{\hyperlink{_contours_8cc_a1ae942ac54ad537f51a8f7d3723f61d7}{ll}}}]{high\+\_\+x,  }\item[{vector$<$ \mbox{\hyperlink{structctree}{ctree}} $\ast$ $>$ \&}]{res }\end{DoxyParamCaption})}
+
+Creates a vector of pointers to trees containing the node whose values lie within the interval low\+\_\+x and high\+\_\+x 
+\begin{DoxyParams}{Parameters}
+{\em node} & The root node of the tree of type ctree which has to be searched \\
+\hline
+{\em low\+\_\+x} & Marks the lower limit of the interval to be searched \\
+\hline
+{\em high\+\_\+x} & Marks the higher limit of the interval to be searched \\
+\hline
+{\em res} & A constantly updated vector of nodes of type ctree that are contained in the interval depicted by low\+\_\+x and high\+\_\+x \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{_contours_8cc_ae66f6b31b5ad750f1fe042a706a4e3d4}\label{_contours_8cc_ae66f6b31b5ad750f1fe042a706a4e3d4}} 
+\index{Contours.cc@{Contours.cc}!main@{main}}
+\index{main@{main}!Contours.cc@{Contours.cc}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{_contours_8cc_aec32689f99b51b08b68f568a796aaf80}\label{_contours_8cc_aec32689f99b51b08b68f568a796aaf80}} 
+\index{Contours.cc@{Contours.cc}!merge\_intervals@{merge\_intervals}}
+\index{merge\_intervals@{merge\_intervals}!Contours.cc@{Contours.cc}}
+\doxysubsubsection{\texorpdfstring{merge\_intervals()}{merge\_intervals()}}
+{\footnotesize\ttfamily set$<$\mbox{\hyperlink{structinterval}{interval}}$>$ merge\+\_\+intervals (\begin{DoxyParamCaption}\item[{set$<$ \mbox{\hyperlink{structinterval}{interval}} $>$}]{s }\end{DoxyParamCaption})}
+
+Function that merges a set of overlapping intervals 
+\begin{DoxyParams}{Parameters}
+{\em s} & Set of intervals to be merged \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Set of intervals containing intervals without overlap formed by merging the overlapping intervals in s 
+\end{DoxyReturn}
+\mbox{\Hypertarget{_contours_8cc_aafbf93539f3641807f6355c739e1a413}\label{_contours_8cc_aafbf93539f3641807f6355c739e1a413}} 
+\index{Contours.cc@{Contours.cc}!rectangle\_DAC@{rectangle\_DAC}}
+\index{rectangle\_DAC@{rectangle\_DAC}!Contours.cc@{Contours.cc}}
+\doxysubsubsection{\texorpdfstring{rectangle\_DAC()}{rectangle\_DAC()}}
+{\footnotesize\ttfamily set$<$\mbox{\hyperlink{structstripe}{stripe}}$>$ rectangle\+\_\+\+DAC (\begin{DoxyParamCaption}\item[{vector$<$ \mbox{\hyperlink{structrectangle}{rectangle}} $>$}]{rect }\end{DoxyParamCaption})}
+
+Driver function used to call the divide and conquer algorithm stripes when provided with a set of iso-\/oriented rectangles 
+\begin{DoxyParams}{Parameters}
+{\em rect} & defines the collection of iso oriented rectangles input by the users \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Final set of stripes computed by the stripes algorithm 
+\end{DoxyReturn}
+\mbox{\Hypertarget{_contours_8cc_a18c55dc1c0456a97bfab6ca5f57ed473}\label{_contours_8cc_a18c55dc1c0456a97bfab6ca5f57ed473}} 
+\index{Contours.cc@{Contours.cc}!set\_difference@{set\_difference}}
+\index{set\_difference@{set\_difference}!Contours.cc@{Contours.cc}}
+\doxysubsubsection{\texorpdfstring{set\_difference()}{set\_difference()}}
+{\footnotesize\ttfamily set$<$pair$<$\mbox{\hyperlink{structinterval}{interval}},\mbox{\hyperlink{_contours_8cc_a1ae942ac54ad537f51a8f7d3723f61d7}{ll}}$>$ $>$ set\+\_\+difference (\begin{DoxyParamCaption}\item[{set$<$ pair$<$ \mbox{\hyperlink{structinterval}{interval}}, \mbox{\hyperlink{_contours_8cc_a1ae942ac54ad537f51a8f7d3723f61d7}{ll}} $>$$>$}]{i1,  }\item[{set$<$ pair$<$ \mbox{\hyperlink{structinterval}{interval}}, \mbox{\hyperlink{_contours_8cc_a1ae942ac54ad537f51a8f7d3723f61d7}{ll}} $>$$>$}]{i2 }\end{DoxyParamCaption})}
+
+Gets the difference of two sets of intervals 
+\begin{DoxyParams}{Parameters}
+{\em i1} & defines a set of intervals, along with the rectangle ID associated with that interval \\
+\hline
+{\em i2} & defines a set of intervals, along with the rectangle ID associated with that interval \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A set of pair of intervals and unique IDs constituting the set difference of i1 and i2 
+\end{DoxyReturn}
+\mbox{\Hypertarget{_contours_8cc_a977cc2d2113ea6d7b5a22e5c5c8d8706}\label{_contours_8cc_a977cc2d2113ea6d7b5a22e5c5c8d8706}} 
+\index{Contours.cc@{Contours.cc}!set\_intersection@{set\_intersection}}
+\index{set\_intersection@{set\_intersection}!Contours.cc@{Contours.cc}}
+\doxysubsubsection{\texorpdfstring{set\_intersection()}{set\_intersection()}}
+{\footnotesize\ttfamily set$<$pair$<$\mbox{\hyperlink{structinterval}{interval}},\mbox{\hyperlink{_contours_8cc_a1ae942ac54ad537f51a8f7d3723f61d7}{ll}}$>$ $>$ set\+\_\+intersection (\begin{DoxyParamCaption}\item[{set$<$ pair$<$ \mbox{\hyperlink{structinterval}{interval}}, \mbox{\hyperlink{_contours_8cc_a1ae942ac54ad537f51a8f7d3723f61d7}{ll}} $>$$>$}]{i1,  }\item[{set$<$ pair$<$ \mbox{\hyperlink{structinterval}{interval}}, \mbox{\hyperlink{_contours_8cc_a1ae942ac54ad537f51a8f7d3723f61d7}{ll}} $>$$>$}]{i2 }\end{DoxyParamCaption})}
+
+Gets the intersection of two sets of intervals 
+\begin{DoxyParams}{Parameters}
+{\em i1} & defines a set of intervals, along with the rectangle ID associated with that interval \\
+\hline
+{\em i2} & defines a set of intervals, along with the rectangle ID associated with that interval \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A set of pair of intervals and unique IDs constituting the set intersection of i1 and i2 
+\end{DoxyReturn}
+\mbox{\Hypertarget{_contours_8cc_a67e41ed85edc94e1a08e1d9ce9d54369}\label{_contours_8cc_a67e41ed85edc94e1a08e1d9ce9d54369}} 
+\index{Contours.cc@{Contours.cc}!set\_union@{set\_union}}
+\index{set\_union@{set\_union}!Contours.cc@{Contours.cc}}
+\doxysubsubsection{\texorpdfstring{set\_union()}{set\_union()}}
+{\footnotesize\ttfamily set$<$pair$<$\mbox{\hyperlink{structinterval}{interval}},\mbox{\hyperlink{_contours_8cc_a1ae942ac54ad537f51a8f7d3723f61d7}{ll}}$>$ $>$ set\+\_\+union (\begin{DoxyParamCaption}\item[{set$<$ pair$<$ \mbox{\hyperlink{structinterval}{interval}}, \mbox{\hyperlink{_contours_8cc_a1ae942ac54ad537f51a8f7d3723f61d7}{ll}} $>$$>$}]{i1,  }\item[{set$<$ pair$<$ \mbox{\hyperlink{structinterval}{interval}}, \mbox{\hyperlink{_contours_8cc_a1ae942ac54ad537f51a8f7d3723f61d7}{ll}} $>$$>$}]{i2 }\end{DoxyParamCaption})}
+
+Gets the union of two sets of intervals 
+\begin{DoxyParams}{Parameters}
+{\em i1} & defines a set of intervals, along with the rectangle ID associated with that interval \\
+\hline
+{\em i2} & defines a set of intervals, along with the rectangle ID associated with that interval \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A set of pair of intervals and unique IDs constituting the set union of i1 and i2 
+\end{DoxyReturn}
+\mbox{\Hypertarget{_contours_8cc_a2b4a618c8325c8d8219c2268f0e2aa01}\label{_contours_8cc_a2b4a618c8325c8d8219c2268f0e2aa01}} 
+\index{Contours.cc@{Contours.cc}!stripes@{stripes}}
+\index{stripes@{stripes}!Contours.cc@{Contours.cc}}
+\doxysubsubsection{\texorpdfstring{stripes()}{stripes()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_contours_8cc_a8d71b8f9c7f1086aa73fd4555ad1ed23}{SRT}} stripes (\begin{DoxyParamCaption}\item[{set$<$ \mbox{\hyperlink{structedge}{edge}} $>$}]{VRX,  }\item[{\mbox{\hyperlink{structinterval}{interval}}}]{x\+\_\+ext,  }\item[{\mbox{\hyperlink{structinterval}{interval}}}]{ylimits }\end{DoxyParamCaption})}
+
+Divde and conquer algorithm that computes the set of stripes along with their x\+\_\+union values for the given set of vertical edges 
+\begin{DoxyParams}{Parameters}
+{\em VRX} & defines a set of stripes on the left side of the median line \\
+\hline
+{\em x\+\_\+ext} & depicts the width of the frame \\
+\hline
+{\em ylimits} & represents the height of the frame \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Intermediary results required for producing the result of the previous call (comprising of set of $<$interval,int$>$ L, set of $<$interval,int$>$ R, set of coordinates P and set of stripes S) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{_contours_8cc_ad82be9744095ea0c86ce6343fabe58ba}\label{_contours_8cc_ad82be9744095ea0c86ce6343fabe58ba}} 
+\index{Contours.cc@{Contours.cc}!y\_partition@{y\_partition}}
+\index{y\_partition@{y\_partition}!Contours.cc@{Contours.cc}}
+\doxysubsubsection{\texorpdfstring{y\_partition()}{y\_partition()}}
+{\footnotesize\ttfamily set$<$\mbox{\hyperlink{structinterval}{interval}}$>$ y\+\_\+partition (\begin{DoxyParamCaption}\item[{set$<$ \mbox{\hyperlink{_contours_8cc_a1ae942ac54ad537f51a8f7d3723f61d7}{ll}} $>$}]{y\+\_\+coordinates }\end{DoxyParamCaption})}
+
+Creates continuous intervals for a given set of points along Y axis 
+\begin{DoxyParams}{Parameters}
+{\em y\+\_\+coordinates} & a set of integers representing the coordinate points for partitioning \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Set of intervals representing the partition induced by y coordinates 
+\end{DoxyReturn}
+\mbox{\Hypertarget{_contours_8cc_aabaf5122088253371d694859b9becff0}\label{_contours_8cc_aabaf5122088253371d694859b9becff0}} 
+\index{Contours.cc@{Contours.cc}!y\_set@{y\_set}}
+\index{y\_set@{y\_set}!Contours.cc@{Contours.cc}}
+\doxysubsubsection{\texorpdfstring{y\_set()}{y\_set()}}
+{\footnotesize\ttfamily set$<$\mbox{\hyperlink{_contours_8cc_a1ae942ac54ad537f51a8f7d3723f61d7}{ll}}$>$ y\+\_\+set (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Creates continuous intervals for a given set of points along Y axis \begin{DoxyReturn}{Returns}
+Set of integers representing the unique y coordinates of vertices of the input iso rectangles 
+\end{DoxyReturn}
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{_contours_8cc_a85a9196a8b551b4b924c4d783ab0eb12}\label{_contours_8cc_a85a9196a8b551b4b924c4d783ab0eb12}} 
+\index{Contours.cc@{Contours.cc}!EDGE\_TYPES@{EDGE\_TYPES}}
+\index{EDGE\_TYPES@{EDGE\_TYPES}!Contours.cc@{Contours.cc}}
+\doxysubsubsection{\texorpdfstring{EDGE\_TYPES}{EDGE\_TYPES}}
+{\footnotesize\ttfamily string EDGE\+\_\+\+TYPES\mbox{[}4\mbox{]} = \{\char`\"{}TOP\char`\"{},\char`\"{}BOTTOM\char`\"{},\char`\"{}LEFT\char`\"{},\char`\"{}RIGHT\char`\"{}\}}
+
+
+
+Global variable to store the possible values of edge types. 
+
+\mbox{\Hypertarget{_contours_8cc_ab881fcb2c053cfa393dad1cd6d3a3526}\label{_contours_8cc_ab881fcb2c053cfa393dad1cd6d3a3526}} 
+\index{Contours.cc@{Contours.cc}!iso\_rectangles\_input@{iso\_rectangles\_input}}
+\index{iso\_rectangles\_input@{iso\_rectangles\_input}!Contours.cc@{Contours.cc}}
+\doxysubsubsection{\texorpdfstring{iso\_rectangles\_input}{iso\_rectangles\_input}}
+{\footnotesize\ttfamily vector$<$\mbox{\hyperlink{structrectangle}{rectangle}}$>$ iso\+\_\+rectangles\+\_\+input}
+
+
+
+Global variable to store the rectangles input by the user. 
+
+\mbox{\Hypertarget{_contours_8cc_aab342d54ef12b177ffb6ddbba770015e}\label{_contours_8cc_aab342d54ef12b177ffb6ddbba770015e}} 
+\index{Contours.cc@{Contours.cc}!LRU\_TYPES@{LRU\_TYPES}}
+\index{LRU\_TYPES@{LRU\_TYPES}!Contours.cc@{Contours.cc}}
+\doxysubsubsection{\texorpdfstring{LRU\_TYPES}{LRU\_TYPES}}
+{\footnotesize\ttfamily string LRU\+\_\+\+TYPES\mbox{[}3\mbox{]} = \{\char`\"{}LEFT\char`\"{},\char`\"{}RIGHT\char`\"{},\char`\"{}UNDEF\char`\"{}\}}
+
+
+
+Global variable to store the subtree type. 
+

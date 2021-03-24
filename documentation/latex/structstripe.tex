@@ -1,0 +1,68 @@
+\hypertarget{structstripe}{}\doxysection{stripe Struct Reference}
+\label{structstripe}\index{stripe@{stripe}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{structstripe_adc488e2f0807350514eba2c90ad5ce93}{operator$<$}} (const \mbox{\hyperlink{structstripe}{stripe}} \&e) const
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structinterval}{interval}} \mbox{\hyperlink{structstripe_ae0c84cb6eea27cd9fb449f929ac59f19}{x\+\_\+int}}
+\begin{DoxyCompactList}\small\item\em The interval x\+\_\+int indicates the coordinates it spans from in the X direction. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structinterval}{interval}} \mbox{\hyperlink{structstripe_aefc1e44f836bec6d5e901910b6b2e9f4}{y\+\_\+int}}
+\begin{DoxyCompactList}\small\item\em The interval y\+\_\+int indicates the coordinates it spans from in the Y direction. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structctree}{ctree}} $\ast$ \mbox{\hyperlink{structstripe_a7199afed6b82ff6453c12669008d3578}{tree}}
+\begin{DoxyCompactList}\small\item\em Represents the binary search tree containing the x union information for this stripe. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Brief description of stripe structure
+
+This structure is used to represent all horizontal stripes that the frame is partitioned into. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{structstripe_adc488e2f0807350514eba2c90ad5ce93}\label{structstripe_adc488e2f0807350514eba2c90ad5ce93}} 
+\index{stripe@{stripe}!operator$<$@{operator$<$}}
+\index{operator$<$@{operator$<$}!stripe@{stripe}}
+\doxysubsubsection{\texorpdfstring{operator$<$()}{operator<()}}
+{\footnotesize\ttfamily bool stripe\+::operator$<$ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structstripe}{stripe}} \&}]{e }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Definition of comparator to facilitate set insertions in a sorted order 
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{structstripe_a7199afed6b82ff6453c12669008d3578}\label{structstripe_a7199afed6b82ff6453c12669008d3578}} 
+\index{stripe@{stripe}!tree@{tree}}
+\index{tree@{tree}!stripe@{stripe}}
+\doxysubsubsection{\texorpdfstring{tree}{tree}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structctree}{ctree}}$\ast$ stripe\+::tree}
+
+
+
+Represents the binary search tree containing the x union information for this stripe. 
+
+\mbox{\Hypertarget{structstripe_ae0c84cb6eea27cd9fb449f929ac59f19}\label{structstripe_ae0c84cb6eea27cd9fb449f929ac59f19}} 
+\index{stripe@{stripe}!x\_int@{x\_int}}
+\index{x\_int@{x\_int}!stripe@{stripe}}
+\doxysubsubsection{\texorpdfstring{x\_int}{x\_int}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structinterval}{interval}} stripe\+::x\+\_\+int}
+
+
+
+The interval x\+\_\+int indicates the coordinates it spans from in the X direction. 
+
+\mbox{\Hypertarget{structstripe_aefc1e44f836bec6d5e901910b6b2e9f4}\label{structstripe_aefc1e44f836bec6d5e901910b6b2e9f4}} 
+\index{stripe@{stripe}!y\_int@{y\_int}}
+\index{y\_int@{y\_int}!stripe@{stripe}}
+\doxysubsubsection{\texorpdfstring{y\_int}{y\_int}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structinterval}{interval}} stripe\+::y\+\_\+int}
+
+
+
+The interval y\+\_\+int indicates the coordinates it spans from in the Y direction. 
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_contours_8cc}{Contours.\+cc}}\end{DoxyCompactItemize}
