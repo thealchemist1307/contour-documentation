@@ -38,4 +38,4 @@ var menudata={children:[
     {text:"Functions",url:"globals_func.html"},
     {text:"Variables",url:"globals_vars.html"},
     {text:"Typedefs",url:"globals_type.html"}]}]},
-    {text:"Go Back",url:"https://daa-assignment.vercel.app/"} ]}
+    {text:"Go Back",url:"https://daa-assignment-thealchemist1307.vercel.app/"} ]}
